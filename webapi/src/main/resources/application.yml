@@ -1,0 +1,22 @@
+##打包注意事项
+## 一、修改下方的信息
+## 二、修改 AppConstants
+
+spring:
+  profiles:
+    active: prod,daoProd,redisProd
+#    active: dev,daoDev,redisDev
+  mvc:
+    favicon:
+      enabled: false
+    view:
+      prefix: templates/
+      suffix: .html
+    static-path-pattern: /static/**
+
+  thymeleaf:
+    prefix: classpath:/templates/
+
+  resources:
+    static-locations: classpath:/static/
+

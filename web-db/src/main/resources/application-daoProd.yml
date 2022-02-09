@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://xxx.xxx.xxx.xxx:3306/translate_db_prod?useUnicode=true&serverTimezone=Asia/Shanghai&characterEncoding=utf8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+      username: root
+      password: cretin**29**
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      # MySQL 8.x: com.mysql.cj.jdbc.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      test-while-idle: true
+
+mybatis-plus:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.cretin.jokesdb.db
+  configuration:
+    map-underscore-to-camel-case: true
+
+debug: false

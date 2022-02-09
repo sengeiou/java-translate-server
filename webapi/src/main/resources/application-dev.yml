@@ -1,0 +1,33 @@
+# 打包注意事件
+# 1、切换数据库地址
+# 2、数据迁移
+
+server:
+  port: 8050
+#  context-path: /cretin
+
+spring:
+  servlet:
+    multipart:
+      max-request-size: 10MB # 上传文件总的最大值
+      max-file-size: 10MB # 单个文件的最大值
+
+  mail:
+    #        host: smtp.qq.com
+    host: smtp.exmail.qq.com
+    #        username: 792075058@qq.com
+    username: muxiannian@mxnzp.com
+    #        password: mzsfuxlsvlzobedb
+    password: Cretin**29**
+    default-encoding: UTF-8
+    ssl:
+      trust: smtp.exmail.qq.com
+    properties:
+      mail:
+        smtp:
+          auth: true  #是否需要认证
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory #SSL证书Socket工厂
+            port: 465 #587
+
+debug: true

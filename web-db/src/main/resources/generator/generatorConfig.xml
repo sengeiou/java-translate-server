@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE generatorConfiguration PUBLIC
+    "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+    "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!-- 数据库驱动:选择你的本地硬盘上面的数据库驱动包-->
+    <!--<classPathEntry-->
+    <!--location="/Users/ctetin/.m2/repository/mysql/mysql-connector-java/5.1.35/mysql-connector-java-5.1.35.jar"/>-->
+    <classPathEntry
+        location="/Users/cretin/.m2/repository/mysql/mysql-connector-java/8.0.23/mysql-connector-java-8.0.23.jar"/>
+    <!--location="/Users/a112233/.m2/repository/mysql/mysql-connector-java/5.1.35/mysql-connector-java-5.1.35.jar"/>-->
+
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <!--数据库链接URL，用户名、密码 -->
+        <!--<jdbcConnection driverClass="com.mysql.jdbc.Driver"-->
+        <!--connectionURL="jdbc:mysql://cdb-k4t8b05k.cd.tencentcdb.com:10064/test?characterEncoding=UTF-8"-->
+        <!--userId="root"-->
+        <!--password="cretin**29**"></jdbcConnection>-->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://49.232.221.12:3306/jokes_test?characterEncoding=UTF-8"
+                        userId="root"
+                        password="cretin"></jdbcConnection>
+        <!--<jdbcConnection driverClass="com.mysql.jdbc.Driver"-->
+        <!--connectionURL="jdbc:mysql://127.0.0.1:3306/test"-->
+        <!--userId="root"-->
+        <!--password="cretin"></jdbcConnection>-->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+        <!-- 生成模型的包名和位置-->
+        <javaModelGenerator targetPackage="com.cretin.tools.model" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!-- 生成映射文件的包名和位置-->
+        <sqlMapGenerator targetPackage="mapping" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
+        <!-- 生成DAO的包名和位置-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.cretin.tools.mapper.auto"
+                             targetProject="src/main/java">
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
+        <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->
+        <table tableName="app_config"></table>
+        <!--<table tableName="app_list"></table>-->
+        <!--<table tableName="app_notice"></table>-->
+        <!--<table tableName="barcode_goods_info"></table>-->
+<!--        <table tableName="barcode_goods_info_fix"></table>-->
+        <!--<table tableName="black_user"></table>-->
+        <!--<table tableName="chinese_word"></table>-->
+        <!--<table tableName="common_file"></table>-->
+        <!--<table tableName="daily_word"></table>-->
+        <!--<table tableName="donate_log"></table>-->
+        <!--<table tableName="encryption_md5"></table>-->
+        <!--<table tableName="feed_back"></table>-->
+        <!--<table tableName="girl_pic"></table>-->
+        <!--<table tableName="girl_pic_link"></table>-->
+        <!--<table tableName="github_project"></table>-->
+        <!--<table tableName="histoday_today"></table>-->
+        <!--<table tableName="holiday_info"></table>-->
+        <!--<table tableName="ip_address"></table>-->
+        <!--<table tableName="jokes_info"></table>-->
+        <!--<table tableName="logistics_info"></table>-->
+        <!--<table tableName="logistics_type"></table>-->
+        <!--<table tableName="lottery_type"></table>-->
+        <!--<table tableName="mobile_location"></table>-->
+        <!--<table tableName="music_info"></table>-->
+        <!--<table tableName="my_app_list"></table>-->
+        <!--<table tableName="news_type"></table>-->
+        <!--<table tableName="phone_code"></table>-->
+        <!--<table tableName="qrcode"></table>-->
+        <!--<table tableName="request_log"></table>-->
+        <!--<table tableName="request_log_tag"></table>-->
+        <!--<table tableName="request_statistics"></table>-->
+        <!--<table tableName="resources_download_list"></table>-->
+        <!--<table tableName="rubbish_type"></table>-->
+        <!--<table tableName="rubbish_type_log"></table>-->
+        <!--<table tableName="third_app_config"></table>-->
+        <!--<table tableName="union_lotto"></table>-->
+        <!--<table tableName="user"></table>-->
+        <!--<table tableName="user_request_statistics"></table>-->
+        <!--<table tableName="user_system_msg"></table>-->
+        <!--<table tableName="user_wx"></table>-->
+        <!--<table tableName="webhock_config"></table>-->
+        <!--<table tableName="world_holiday_info"></table>-->
+        <!--<table tableName="verification_code"></table>-->
+        <!--<table tableName="wx_erweima"></table>-->
+    </context>
+</generatorConfiguration>
